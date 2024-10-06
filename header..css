@@ -97,6 +97,11 @@ display: block;
 
 }
 
+  .descriçao_header {
+display: none;
+
+}
+
 .menu_item{
   padding: 0em 1em;
   font-family: var(--fonte-principal);
