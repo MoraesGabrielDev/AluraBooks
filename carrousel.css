@@ -1,0 +1,96 @@
+.titulo_carrousel{
+  background: var(--branco);
+  color: var(--laranja);
+  font-family: var(--fonte-principal);
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0.8em;
+}
+
+.swiper-slide img{
+  width: 100%;
+}
+
+div.swiper-button-next {
+  display: none;
+}
+
+div.swiper-button-prev {
+  display: none;
+}
+
+div.swiper-pagination{
+  position: initial;
+  margin: .5em 0;
+}
+
+
+@media screen and (min-width: 1024px) {
+
+  .titulo_carrousel{
+  font-size: 26px;
+  padding-top:1.5em ;
+  }
+  
+
+  div.swiper-pagination{
+    margin: 2em 0 3em 0;
+  }
+
+  div.swiper-button-next {
+    display: block;
+    top: 60%;
+  }
+  
+  div.swiper-button-prev {
+    display: block;
+    top: 60%;
+  }
+
+  .swiper{
+    width: 50%;
+   
+  }
+
+}
+
+@media screen and (min-width: 1728px) {
+  .container_card_carrousel{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+     margin: 0 6em 0 6em;
+  }
+
+  .sub_tit_descriçao{
+  font-size: 36px;
+  }
+
+
+  .swiper{
+    width: 35%;
+    margin-bottom: 0.3em;
+    transform: translateX(3%);
+  }
+
+  div.card{
+    width: 40%;
+    transform: translateX(-3%);
+  }
+
+  div.swiper-pagination{
+    margin:  1em 0;
+  }
+
+  div.swiper-button-next {
+    display: block;
+    top: 50%;
+  }
+  
+  div.swiper-button-prev {
+    display: block;
+    top: 50%;
+  }
+}

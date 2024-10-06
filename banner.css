@@ -1,0 +1,85 @@
+.container-banner{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: var(--azul-degrade);
+  padding: 2.5em 2em;
+}
+
+.titulo_banner{
+font-family: var(--fonte-principal);
+font-weight: 700;
+font-size: 18px;
+color: var(--branco);
+
+}
+
+.paragrafo_banner{
+  color: var(--branco);
+  font-family: var(--fonte-principal);
+  font-weight: 300;
+  margin: 1em 0;
+  font-size: 16px;
+ text-align: center;
+}
+
+.botao_banner{
+  width: 100%;
+  color: var(--branco);
+  font-family: var(--fonte-principal);
+  font-size: 14px;
+  font-weight: 200;
+  background: var(--azul-degrade);
+  border: 1px solid var(--branco);
+  border-radius: 24px;
+  
+  padding: 0.8em
+ 
+}
+
+.botao_banner::placeholder{
+  transform: translateX(8%);
+  font-family: var(--fonte-principal);
+  font-weight: 400;
+  text-align: center;
+  color: var(--branco);
+  background-image: url(assets/Vector.png);
+  background-repeat: no-repeat;
+  background-position: 20px;
+}
+
+
+@media screen and (min-width: 1024px) {
+
+  .titulo_banner{
+    font-family: var(--fonte-principal);
+    font-weight: 700;
+    font-size: 36px;
+    color: var(--branco);
+    
+    }
+
+    .botao_banner{
+      width: 50%;
+    }
+
+    .botao_banner::placeholder{
+      transform: translateX(5%);
+      background-position: 80px;
+    }
+
+}
+
+
+@media screen and (min-width: 1728px) {
+
+  .botao_banner{
+    width: 30%;
+  }
+
+  .botao_banner::placeholder{
+    transform: translateX(5%);
+    background-position: 80px;
+  }
+}
+

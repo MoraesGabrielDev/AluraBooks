@@ -1,0 +1,127 @@
+.topicos-recentes{
+  background: var(--azul-degrade);
+ text-align: center;
+}
+
+.titulo_topicos{
+  font-family: var(--fonte-principal);
+  font-weight: 200;
+  font-size: 16px;
+  padding: 1em 1em;
+  text-transform: uppercase;
+  color: var(--branco);
+}
+
+.lista_topicos{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+}
+
+
+.tópicos_items{
+ margin: 2em 0.8em;
+}
+
+.topicos_links{
+  text-decoration: none;
+  color: var(--branco);
+  background-color: var(--laranja);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 1.5em
+}
+
+.botao_novidades{
+  width: 360px;
+  color: var(--azul-fonte);
+  font-family: var(--fonte-principal);
+  font-size: 14px;
+  font-weight: 200;
+  background: var(--branco);
+  border: 1px solid var(--azul-fonte);
+  border-radius: 24px;
+  padding: 0.8em;
+
+}
+
+.botao_novidades::placeholder{
+  
+  font-family: var(--fonte-principal);
+  font-weight: 400;
+ padding-left: 4em;
+  color: var(--azul-fonte);
+  background-image: url(assets/Email.svg);
+  background-repeat: no-repeat;
+  background-position: 20px;
+}
+
+.novidades{
+  padding: 1em;
+  background-color: var(--branco);
+}
+
+.titulo_novidades{
+  font-family: var(--fonte-principal);
+  font-size: 18px;
+  color: var(--azul-fonte);
+  font-weight: 400;
+}
+
+.paragrafo_novidades{
+  color: var(--azul-fonte);
+  font-size: 16px;
+  font-family: var(--fonte-principal);
+  font-weight: 300;
+  padding: 1em 0.5em 1em 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .titulo_topicos{
+    font-size: 24px;
+  }
+
+  .tópicos_items{
+    margin: 3em 0.8em;
+   }
+
+  .topicos_links{
+    font-size: 24px;
+  }
+
+  .novidades{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .titulo_novidades{
+    font-size: 24px;
+    font-weight: 600;
+    margin-left: 1.4em;
+    margin-top: 1em;
+  }
+
+  .paragrafo_novidades{
+    margin-right: 1em;
+    margin-left: 2em;
+    width: 80%;
+  }
+
+  .botao_novidades{
+    width: 30%;
+  }
+ 
+}
+
+@media screen and (min-width: 1728px){
+  .titulo_topicos{
+    font-size: 32px;
+  }
+
+  .tópicos_items{
+    margin: 3em 0.8em;
+   }
+}

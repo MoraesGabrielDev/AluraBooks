@@ -1,0 +1,166 @@
+.cabeçalho-menu-hamburguer{
+  width: 24px;
+  height: 24px;
+  background-image: url(assets/Menu.png);
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+
+
+.cabeçalho{
+  background-color: var(--branco);
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.container{
+  display: flex;
+  align-items: center;
+  
+}
+
+.container_imagem{
+  padding: 1em;
+}
+
+.lista-menu{
+  display: none;
+  position: absolute;
+  top: 100%;
+  width: 60vw;
+}
+.lista-menu a{
+  text-decoration: none;
+}
+
+
+.container__botao:checked~.lista-menu{
+  display: block;
+}
+
+
+
+.lista_titulo,
+.lista_item{
+  padding: 1em;
+  background-color: var(--branco);
+}
+
+.lista_titulo a{
+  color: var(--laranja);
+  font-family: var(--fonte-principal);
+  font-weight: 600;
+}
+
+.lista_link{
+  background: var(--azul-degrade);
+  background-clip: text;
+  text-transform: uppercase;
+  font-family: var(--fonte-principal);
+  font-weight: 400;
+}
+
+.container__botao{
+  display: none;
+}
+
+.titulo_header{
+  display: none;
+}
+
+.menu_header{
+  display: none;
+}
+
+
+
+@media screen and (min-width: 1024px) {
+
+.titulo_header
+ {
+font-family: var(--fonte-secundaria);
+font-size: 30px;
+display: block;
+}
+
+.titulo_negrito{
+  font-weight: 600;
+}
+
+.menu_header{
+  display: flex;
+  list-style: none;
+  align-items: center;
+
+}
+
+.menu_item{
+  padding: 0em 1em;
+  font-family: var(--fonte-principal);
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.menu_link{
+  text-transform: uppercase;
+  font-family: var(--fonte-principal);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.img_transparente{
+  display: none;
+}
+
+.cabeçalho-menu-hamburguer{
+  display: none;
+}
+
+.opçoes-botao:checked~.lista-menu{
+  display: block;
+  width: auto;
+}
+
+.opçoes-botao{
+  display: none;
+}
+.descriçao_header {
+display: none;
+
+}
+
+}
+
+@media screen and (min-width: 1728px) {
+
+  .descriçao_header {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--preto);
+    font-family: var(--fonte-principal);
+    margin: 0 2em 0.5em 0em;
+  
+  }
+
+  .container_imagem img{
+    margin-right: 0.5em;
+  }
+
+  .img_transparente{
+    display: none;
+  }
+
+  .menu_header{
+    margin-right: auto;
+    margin-left: 2em;
+  }
+  
+}
+
+
+
