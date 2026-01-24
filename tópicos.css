@@ -1,15 +1,17 @@
 .topicos-recentes{
-  background: var(--azul-degrade);
- text-align: center;
+  background: var(--azul-sutil);
+  text-align: center;
+  padding: 3em 1em;
 }
 
 .titulo_topicos{
   font-family: var(--fonte-principal);
-  font-weight: 200;
+  font-weight: 400;
   font-size: 16px;
-  padding: 1em 1em;
+  padding: 0 1em 1em;
   text-transform: uppercase;
   color: var(--branco);
+  letter-spacing: 0.24em;
 }
 
 .lista_topicos{
@@ -21,28 +23,37 @@
 
 
 .tópicos_items{
- margin: 2em 0.8em;
+ margin: 0.8em 0.8em;
 }
 
 .topicos_links{
   text-decoration: none;
   color: var(--branco);
-  background-color: var(--laranja);
+  background-color: rgba(245, 158, 11, 0.2);
+  border: 1px solid rgba(245, 158, 11, 0.5);
   font-size: 14px;
   font-weight: 700;
   text-decoration: none;
-  padding: 1.5em
+  padding: 0.9em 1.5em;
+  border-radius: 999px;
+  display: inline-block;
+  transition: transform var(--transicao), box-shadow var(--transicao);
+}
+
+.topicos_links:hover{
+  transform: translateY(-2px);
+  box-shadow: var(--sombra-suave);
 }
 
 .botao_novidades{
   width: 360px;
-  color: var(--azul-fonte);
+  color: var(--branco);
   font-family: var(--fonte-principal);
   font-size: 14px;
   font-weight: 200;
-  background: var(--branco);
-  border: 1px solid var(--azul-fonte);
-  border-radius: 24px;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  border-radius: 999px;
   padding: 0.8em;
 
 }
@@ -52,26 +63,29 @@
   font-family: var(--fonte-principal);
   font-weight: 400;
  padding-left: 4em;
-  color: var(--azul-fonte);
+  color: rgba(255, 255, 255, 0.7);
   background-image: url(assets/Email.svg);
   background-repeat: no-repeat;
   background-position: 20px;
 }
 
 .novidades{
-  padding: 1em;
-  background-color: var(--branco);
+  padding: 2.5em 1.5em;
+  background-color: var(--azul-profundo);
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
 .titulo_novidades{
   font-family: var(--fonte-principal);
   font-size: 18px;
-  color: var(--azul-fonte);
-  font-weight: 400;
+  color: var(--branco);
+  font-weight: 600;
 }
 
 .paragrafo_novidades{
-  color: var(--azul-fonte);
+  color: rgba(255, 255, 255, 0.7);
   font-size: 16px;
   font-family: var(--fonte-principal);
   font-weight: 300;
@@ -84,7 +98,7 @@
   }
 
   .tópicos_items{
-    margin: 3em 0.8em;
+    margin: 1em 0.8em;
    }
 
   .topicos_links{
@@ -92,21 +106,18 @@
   }
 
   .novidades{
-    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 2em;
   }
 
   .titulo_novidades{
     font-size: 24px;
     font-weight: 600;
-    margin-left: 1.4em;
-    margin-top: 1em;
   }
 
   .paragrafo_novidades{
-    margin-right: 1em;
-    margin-left: 2em;
     width: 80%;
   }
 
