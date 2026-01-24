@@ -2,8 +2,36 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  background: var(--azul-degrade);
-  padding: 2.5em 2em;
+  background: radial-gradient(circle at top, rgba(56, 189, 248, 0.35), transparent 55%),
+    var(--azul-degrade);
+  padding: 4em 2em 3em;
+  gap: 1rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.container-banner::after{
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: rgba(34, 197, 94, 0.18);
+  filter: blur(10px);
+  right: -60px;
+  bottom: -80px;
+}
+
+.banner_tag{
+  font-family: var(--fonte-principal);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.32em;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.4em 1.2em;
+  border-radius: 999px;
 }
 
 .titulo_banner{
@@ -11,6 +39,7 @@ font-family: var(--fonte-principal);
 font-weight: 700;
 font-size: 18px;
 color: var(--branco);
+max-width: 680px;
 
 }
 
@@ -21,6 +50,17 @@ color: var(--branco);
   margin: 1em 0;
   font-size: 16px;
  text-align: center;
+ max-width: 680px;
+ opacity: 0.9;
+}
+
+.banner_actions{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+  max-width: 560px;
+  z-index: 1;
 }
 
 .botao_banner{
@@ -28,17 +68,15 @@ color: var(--branco);
   color: var(--branco);
   font-family: var(--fonte-principal);
   font-size: 14px;
-  font-weight: 200;
-  background: var(--azul-degrade);
-  border: 1px solid var(--branco);
-  border-radius: 24px;
-  
-  padding: 0.8em
- 
+  font-weight: 300;
+  background: rgba(15, 23, 42, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  padding: 0.9em 1.2em;
+  backdrop-filter: blur(8px);
 }
 
 .botao_banner::placeholder{
-  transform: translateX(8%);
   font-family: var(--fonte-principal);
   font-weight: 400;
   text-align: center;
@@ -48,6 +86,43 @@ color: var(--branco);
   background-position: 20px;
 }
 
+.banner_button{
+  border: none;
+  border-radius: 999px;
+  padding: 0.9em 1.4em;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  background: var(--branco);
+  color: var(--azul-profundo);
+  box-shadow: var(--sombra-suave);
+  cursor: pointer;
+  transition: transform var(--transicao), box-shadow var(--transicao);
+}
+
+.banner_button:hover{
+  transform: translateY(-2px);
+  box-shadow: var(--sombra-forte);
+}
+
+.banner_stats{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.5em;
+  width: min(900px, 100%);
+  margin-top: 1.5em;
+  z-index: 1;
+}
+
+.banner_stats strong{
+  font-size: 20px;
+  display: block;
+}
+
+.banner_stats span{
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.75);
+}
 
 @media screen and (min-width: 1024px) {
 
@@ -59,13 +134,18 @@ color: var(--branco);
     
     }
 
-    .botao_banner{
-      width: 50%;
+    .banner_actions{
+      flex-direction: row;
+      align-items: center;
     }
 
-    .botao_banner::placeholder{
-      transform: translateX(5%);
-      background-position: 80px;
+    .botao_banner{
+      width: 65%;
+      text-align: left;
+    }
+
+    .banner_button{
+      width: 35%;
     }
 
 }
@@ -73,13 +153,7 @@ color: var(--branco);
 
 @media screen and (min-width: 1728px) {
 
-  .botao_banner{
-    width: 30%;
-  }
-
-  .botao_banner::placeholder{
-    transform: translateX(5%);
-    background-position: 80px;
+  .container-banner{
+    padding: 5em 8em 4em;
   }
 }
-

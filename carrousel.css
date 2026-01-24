@@ -1,16 +1,19 @@
 .titulo_carrousel{
-  background: var(--branco);
-  color: var(--laranja);
+  background: transparent;
+  color: var(--branco);
   font-family: var(--fonte-principal);
   font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
-  padding: 0.8em;
+  padding: 1.5em 0 0.8em;
+  letter-spacing: 0.12em;
 }
 
 .swiper-slide img{
   width: 100%;
+  border-radius: 16px;
+  box-shadow: var(--sombra-suave);
 }
 
 div.swiper-button-next {
@@ -24,6 +27,19 @@ div.swiper-button-prev {
 div.swiper-pagination{
   position: initial;
   margin: .5em 0;
+}
+
+.carrosel{
+  padding-bottom: 2.5em;
+}
+
+.container_card_carrousel{
+  background: rgba(15, 23, 42, 0.6);
+  margin: 0 1.2em;
+  padding: 1.8em 1.2em;
+  border-radius: 24px;
+  border: var(--borda-suave);
+  box-shadow: var(--sombra-suave);
 }
 
 
@@ -41,12 +57,14 @@ div.swiper-pagination{
 
   div.swiper-button-next {
     display: block;
-    top: 60%;
+    top: 55%;
+    color: var(--branco);
   }
   
   div.swiper-button-prev {
     display: block;
-    top: 60%;
+    top: 55%;
+    color: var(--branco);
   }
 
   .swiper{
